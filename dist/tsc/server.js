@@ -14,6 +14,6 @@ exports.app.use((0, body_parser_1.json)());
 const port = process.env.PORT || 4000;
 exports.app.listen(port, () => {
     console.log('Hosted: http://localhost:' + port);
-    (0, scrapper_1.scrap)();
+    (0, scrapper_1.createPageData)("http://paste2vljvhmwq5zy33re2hzu4fisgqsohufgbljqomib2brzx3q4mid.onion/lists").then(console.log);
 });
 //# sourceMappingURL=server.js.map
