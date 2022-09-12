@@ -1,28 +1,22 @@
-# parKing - park like a king!
+# Paste Scrapper
 
-parKing is a project using the MERN stack made to help you find your next parking spot! This repository is the frontend side of the app, for the backend side [click here.](https://github.com/leopariente/parking-locator-server)
-To see the deployed version [click here.](https://kingparking.herokuapp.com/)
+This project is still in the works and is not finished.
+
+This project is part of a hackathon with cyber company IntSights Rapid7.
+## About
+As part of the bootcamp I took a part of a hackathon took place with cyber company IntSights Rapid7. 
+Within the project we were asked to connect to Tor browser and scrap a paste website. 
+With the data we scraped we were asked to build a gui, database and manipulate the data.
+
 ## Installation
 
-* Clone this repo and the [server repo](https://github.com/leopariente/parking-locator-server).
+* Clone this repo.
 * In both terminals run ```npm ci```
 * In both terminals run ```npm start```
 
 ## How to use
 
-When you first enter the app you will see a map with markers on it. Each marker is a parking spot uploaded by another user with the following details:
-* Car model
-* Car color
-* Time the car leaves
-* License plate (optional)
-* Phone number (optional)
 
-To upload a parking spot all you need to do is login and click the map where your car is.
-
-## Tests
-
-To run tests. in terminal run:
- ``` npm run jest ```
 
 ## License
 
