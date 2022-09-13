@@ -1,4 +1,5 @@
 import { Schema, model, connect } from "mongoose";
+require("dotenv").config();
 
 const PasteSchema = new Schema({
   title: String,
@@ -12,7 +13,7 @@ export const PasteModel = model("Paste", PasteSchema);
 
 // Connection to mongo atlas
 connect(
-  "mongodb+srv://Cyber4s:ilovecode@cluster0.pluyv.mongodb.net/pastes?retryWrites=true&w=majority"
+  process.env.DATABASE_URL!
 ).catch((err) => console.log(err));
 
 // Add a parking spot to the database
