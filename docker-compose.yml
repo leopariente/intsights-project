@@ -1,0 +1,50 @@
+version: '3.8'
+services: 
+  tor:
+    image: dperson/torproxy
+    ports:
+      - "8118:8118"
+      - "9050:9050"
+# mongo service
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27018:27017"
+    volumes:
+      - "mongodb_db:/data/db"
+
+  # mongo dashboard service
+  mongoex:
+    restart: always
+    image: mongo-express
+    environment:
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=admin
+    ports:
+      - "8081:8081"
+    volumes:
+      - "mongodb_db:/data/db"
+
+  api:
+   build: ./backend
+   ports: 
+    - "4000:4000"
+   volumes:
+    - "./backend:/app/api"
+   depends_on: 
+    - mongo
+    - tor  
+  # FRONTEND: 
+  #  build: ./frontend
+  #  ports: 
+  #   - "3000:3000"
+  #  volumes:
+  #   - "./frontend:/app/frontend"
+  #  depends_on: 
+  #   - API
+  #  stdin_open: true
+  #  tty: true
+volumes:
+  mongodb_db:
+    driver: local
