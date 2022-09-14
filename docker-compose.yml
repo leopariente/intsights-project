@@ -1,10 +1,12 @@
 version: '3.8'
 services: 
+# tor service 
   tor:
     image: dperson/torproxy
     ports:
       - "8118:8118"
       - "9050:9050"
+      
 # mongo service
   mongo:
     image: mongo
@@ -35,16 +37,16 @@ services:
    depends_on: 
     - mongo
     - tor  
-  # FRONTEND: 
-  #  build: ./frontend
-  #  ports: 
-  #   - "3000:3000"
-  #  volumes:
-  #   - "./frontend:/app/frontend"
-  #  depends_on: 
-  #   - API
-  #  stdin_open: true
-  #  tty: true
+  frontend: 
+   build: ./frontend
+   ports: 
+    - "3000:3000"
+   volumes:
+    - "./frontend:/app/client"
+   depends_on: 
+    - api
+   stdin_open: true
+   tty: true
 volumes:
   mongodb_db:
     driver: local

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Element, load, CheerioAPI } from "cheerio";
 import { schedule } from "node-cron";
-import { PasteModel } from "./db/mongo";
+import { PasteModel } from "./db/models/pasteModel";
 
 export async function scrap(
   url = "http://paste2vljvhmwq5zy33re2hzu4fisgqsohufgbljqomib2brzx3q4mid.onion/lists"

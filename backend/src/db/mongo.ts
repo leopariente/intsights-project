@@ -1,15 +1,6 @@
-import { Schema, model, connect } from "mongoose";
+import { connect } from "mongoose";
+import { PasteModel } from "./models/pasteModel"
 require("dotenv").config();
-
-const PasteSchema = new Schema({
-  title: String,
-  author: String,
-  date: String,
-  content: String,
-  url: String
-});
-
-export const PasteModel = model("Paste", PasteSchema);
 
 // Connection to mongo atlas
 connect(

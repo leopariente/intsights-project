@@ -12,7 +12,7 @@ const port = process.env.PORT || 4000;
 
 //@ts-ignore
 app.get("/", (req: Request, res: Response) => {
-  res.send(getDB());
+  getDB().then(response => res.send(response));
 })
 
 app.listen(port, () => {
