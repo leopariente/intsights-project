@@ -1,7 +1,5 @@
 # Paste Scrapper
 
-This project is still in the works and is not finished.
-
 This project is part of a hackathon with cyber company IntSights Rapid7.
 ## About
 As part of the bootcamp I took a part of a hackathon took place with cyber company IntSights Rapid7. 

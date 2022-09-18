@@ -6,7 +6,6 @@ import { PasteModel } from "./db/models/pasteModel";
 export async function scrap(
   url = "http://paste2vljvhmwq5zy33re2hzu4fisgqsohufgbljqomib2brzx3q4mid.onion/lists"
 ) {
-  console.log(process.env.TOR);
   const data = await axios.get(url, {
     proxy: {
       host: process.env.TOR_HOST || "localhost",
@@ -81,7 +80,6 @@ export const createPageData = async (time: string) => {
     .slice(1)
     .forEach(async (tr) => {
       const obj = await createPostObjects($, tr);
-      console.log(obj);
       await PasteModel.updateOne(
         { url: obj.url },
         { $set: obj },

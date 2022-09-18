@@ -20,6 +20,5 @@ export function addToDB(data: any) {
 
 export async function getDB() {
   const list = await PasteModel.find();
-  console.log(list);
   return list;
 }
