@@ -12,8 +12,6 @@ With the data we scraped we were asked to build a gui, database and manipulate t
 * In both terminals run ```npm ci```
 * In both terminals run ```npm start```
 
-## How to use
-
 
 
 ## License
