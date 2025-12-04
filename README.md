@@ -128,48 +128,6 @@ cd frontend
 npm run build
 ```
 
-## 📁 Project Structure
-
-```
-intsights-project/
-├── backend/                          # Express.js API server
-│   ├── src/
-│   │   ├── server.ts                # Main server entry point
-│   │   ├── scrapper.ts              # Tor scraping logic
-│   │   ├── db/
-│   │   │   ├── mongo.ts             # MongoDB connection
-│   │   │   └── models/
-│   │   │       └── pasteModel.ts    # Data schema
-│   │   └── ...
-│   ├── package.json
-│   ├── tsconfig.json
-│   ├── jest.config.js               # Test configuration
-│   ├── webpack.config.js            # Build configuration
-│   └── Dockerfile
-│
-├── frontend/                         # React application
-│   ├── src/
-│   │   ├── index.tsx                # React entry point
-│   │   ├── App.tsx                  # Main component
-│   │   ├── interface.ts             # TypeScript interfaces
-│   │   ├── components/
-│   │   │   ├── List.tsx             # List component
-│   │   │   └── Paste/
-│   │   │       └── Paste.tsx        # Paste display component
-│   │   ├── App.scss
-│   │   └── index.css
-│   ├── public/
-│   │   ├── index.html
-│   │   ├── manifest.json
-│   │   └── robots.txt
-│   ├── package.json
-│   ├── tsconfig.json
-│   └── Dockerfile
-│
-├── docker-compose.yml               # Multi-container orchestration
-└── README.md                         # This file
-```
-
 ## 🔧 Technology Stack
 
 ### Frontend
@@ -237,16 +195,6 @@ cd backend
 npm run jest
 ```
 
-### Linting
-
-**Backend Linting:**
-
-```bash
-cd backend
-npm run lint          # Check for issues
-npm run lint-fix      # Auto-fix issues
-```
-
 ## 🐳 Docker
 
 ### Build Images
@@ -272,23 +220,6 @@ docker-compose logs -f [service-name]
 ```bash
 docker-compose down
 ```
-
-### Access Services
-
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:4000
-- **MongoDB UI**: http://localhost:8081 (admin / admin)
-- **Tor Proxy**: localhost:9050 (SOCKS5) or localhost:8118 (HTTP)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
